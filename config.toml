@@ -2,6 +2,7 @@ baseURL = "/"
 relativeUrls = true
 DefaultContentLanguage = "en"
 languageCode = "en-us"
+
 title = "Lightbi"
 theme = "lightbi-hugo"
 metaDataFormat = "yaml"
@@ -17,6 +18,11 @@ enableRobotsTXT = true
 enableGitInfo = false
 Paginate = 6
 summaryLength  = "30"
+
+[build.environmnet]
+HUGO_VERSION = "0.125.5"
+TZ = "America/New_York"
+DART_SASS_VERSION = "1.77.1"
 
 [Params]
 selfHosted = true
