@@ -119,8 +119,7 @@
 <div class="">
   {{ $has_related := false }}
   {{ if .Site.Params.showRelatedPosts }}
-  {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink)
-  }}
+  {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink)}}
   {{ $has_related = true }}
   {{ end }}
 
