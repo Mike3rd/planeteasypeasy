@@ -84,8 +84,6 @@
       {{- range $k, $v := $supported -}}
         {{- $keys = append $k $keys -}}
       {{- end -}}
-      {{- warnf "The site language %q isn't supported by lunr, the search results might be suboptimal. Supported languages are: %q" .Site.Language.Lang $keys -}}
-    {{- end -}}
   {{- end -}}
 
   <script src="{{ "js/lunr-search.js" | absURL }}" data-index="{{ (resources.Get "json/search.json" | resources.ExecuteAsTemplate "/search.json" ($.GetPage "/")).RelPermalink }}"></script>
