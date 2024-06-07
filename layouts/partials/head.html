@@ -84,6 +84,7 @@
       {{- range $k, $v := $supported -}}
         {{- $keys = append $k $keys -}}
       {{- end -}}
+    {{- end -}}
   {{- end -}}
 
   <script src="{{ "js/lunr-search.js" | absURL }}" data-index="{{ (resources.Get "json/search.json" | resources.ExecuteAsTemplate "/search.json" ($.GetPage "/")).RelPermalink }}"></script>
